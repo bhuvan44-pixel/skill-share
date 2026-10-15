@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .profile-card {
+            background: white;
+            width: 350px;
+            max-width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .cover {
+            height: 120px;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+        }
+
+        h2 {
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .username {
+            color: #777;
+            margin: 5px 0 15px;
+        }
+
+        .bio {
+            padding: 0 20px;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .details {
+            text-align: left;
+            padding: 20px 25px;
+            color: #444;
+            line-height: 2;
+        }
+
+        .details p {
+            border-bottom: 1px solid #eee;
+            padding: 5px 0;
+        }
+
+        .social-links {
+            margin: 5px 0 20px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #2575fc;
+            margin: 0 8px;
+            font-weight: bold;
+        }
+
+        .edit-btn {
+            background: #2575fc;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+
+        .edit-btn:hover {
+            background: #1558c0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="profile-card">
+
+        <div class="cover"></div>
+
+        <img
+            src="https://i.pravatar.cc/150?img=12"
+            alt="Profile Picture"
+            class="profile-img"
+        >
+
+        <h2>John Doe</h2>
+        <p class="username">@bhuvan</p>
+
+        <p class="bio">
+            Web development enthusiast 💻
+            Passionate about coding, design, and technology.
+        </p>
+
+        <div class="details">
+            <p><strong>Email:</strong> john@example.com</p>
+            <p><strong>Location:</strong> Mandya, India</p>
+            <p><strong>Profession:</strong> Web Developer</p>
+            <p><strong>Joined:</strong> september 2025</p>
+        </div>
+
+        <div class="social-links">
+            <a href="https://instagram.com">Instagram</a>
+            <a href="https://linkedin.com">LinkedIn</a>
+            <a href="https://github.com">GitHub</a>
+        </div>
+
+        <button class="edit-btn" onclick="editProfile()">
+            Edit Profile
+        </button>
+
+    </div>
+
+    <script>
+        function editProfile() {
+            const name = prompt("Enter your name:");
+
+            if (name && name.trim() !== "") {
+                document.querySelector("h2").textContent = name;
+            }
+
+            const bio = prompt("Enter your bio:");
+
+            if (bio !== null && bio.trim() !== "") {
+                document.querySelector(".bio").textContent = bio;
+            }
+        }
+    </script>
+
+</body>
+</html>
